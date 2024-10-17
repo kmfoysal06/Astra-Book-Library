@@ -1,0 +1,50 @@
+.hero-content-inner{
+	display: flex;
+	justify-content:space-between;
+	div{
+		width: 50%;
+		padding: 10px;
+	}
+	.hero-contents{
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction:column;
+		gap:10px;
+	}
+}
+.astra-book-library-slider{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    gap: 10px;
+	.single-book{
+		border: 1px solid;
+		padding: 10px;
+		display: grid;
+		place-items:center;
+		gap:5px;
+		p{
+			margin: 0;
+		}
+	}
+}
+.featured{
+	padding: 10px;
+	text-align: center;
+}
+.hero-btn{
+	padding: 10px 50px;
+	font-size:1.3em;
+	background: #222;
+	border-radius: 30px;
+	margin: 10px auto;
+	width: max-content;
+	display: block;
+	color:#fff;
+	&:hover{
+		background: #000;
+		color: #fff;
+	}
+}

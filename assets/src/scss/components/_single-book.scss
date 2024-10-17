@@ -1,0 +1,9 @@
+.single-book-container{
+	display: grid;
+	grid-template-columns:1fr 1fr;
+
+	.book-image{
+		display: flex;
+		justify-content:center;
+	}
+}

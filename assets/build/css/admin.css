@@ -1,0 +1,16 @@
+/*!********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/admin.scss ***!
+  \********************************************************************************************************************************************************/
+.book-meta div {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=admin.css.map */
+/*# sourceMappingURL=admin.css.map*/

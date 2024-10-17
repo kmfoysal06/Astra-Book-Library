@@ -1,0 +1,51 @@
+{
+  "name": "astra-book-library",
+  "version": "1.0.0",
+  "description": "Book Library Template for Astra",
+  "main": "main.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+    "clean": "rm -rf build/*"
+  },
+  "keywords": [
+    "astra",
+    "book",
+    "library",
+    "child",
+    "theme"
+  ],
+  "author": "Kazi Mohammad Foysal",
+  "license": "GNU",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-react": "^7.24.1",
+    "autoprefixer": "^10.4.19",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.1",
+    "datetimepicker": "^0.1.39",
+    "file-loader": "^6.2.0",
+    "flatpickr": "^4.6.13",
+    "glob-all": "^3.3.1",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.8.1",
+    "postcss-loader": "^8.1.1",
+    "purgecss-webpack-plugin": "^6.0.0",
+    "sass": "^1.79.3",
+    "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "postcss-nested": "^6.0.1"
+  }
+}
