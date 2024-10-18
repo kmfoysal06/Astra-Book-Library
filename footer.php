@@ -15,7 +15,6 @@ if(!defined('ABSPATH')) {
   <div class="astra-book-library-footer-copyright">
     <p>© <?php echo get_bloginfo('name'); ?> - Copyright 2024</p>
   </div>
-  <!-- <div class="astra-book-library-loader"></div> -->
 </footer>
 <?php wp_footer(); ?>
 </body>

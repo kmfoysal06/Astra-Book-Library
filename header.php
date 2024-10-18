@@ -17,6 +17,7 @@ if(!defined('ABSPATH')) {
 </head>
 
 <body <?php body_class(); ?>>
+    <div class="astra-book-library-loader"></div>
     <?php 
         if ( function_exists( 'wp_body_open' ) ) {
             wp_body_open();
@@ -44,4 +45,4 @@ if(!defined('ABSPATH')) {
     </header>
     <br>
     <br>
-    <main role="main" id="astra-book-library-content" tabindex="-1">
+    <main role="main" id="astra-book-library-content" style="display: none;" tabindex="-1">
