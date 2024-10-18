@@ -16,8 +16,8 @@ get_header();
 if(have_posts()):while(have_posts()):the_post();
 
     $saved_value = get_post_meta(get_the_ID(),'__astra_library_book_info',true);
-    $book_description = isset($saved_value['book_description']) ? $saved_value['book_description'] : 'No Description';
-    $book_author = isset($saved_value['book_author']) ? $saved_value['book_author'] : 'Unknown Author';
+    $book_description = (isset($saved_value['book_description']) && !empty($saved_value['book_description'])) ? $saved_value['book_description'] : 'No Description';
+    $book_author = (isset($saved_value['book_author']) && !empty($saved_value['book_author'])) ? $saved_value['book_author'] : 'Unknown Author';
 
     if(has_post_thumbnail()){
         $thumbnail_url = get_the_post_thumbnail_url(get_the_ID());

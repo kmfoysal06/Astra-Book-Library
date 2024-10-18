@@ -7,10 +7,10 @@ if(have_posts()):the_post();
 
 $saved_value = get_post_meta(get_the_ID(),'__astra_library_book_info',true);
 
-$book_description = isset($saved_value['book_description']) ? $saved_value['book_description'] : 'No Description';
-$book_author = isset($saved_value['book_author']) ? $saved_value['book_author'] : 'Unknown Author';
-$book_publisher = isset($saved_value['book_publisher']) ? $saved_value['book_publisher'] : 'Unknown Publisher';
-$book_publish_date = isset($saved_value['book_publish_date']) ? $saved_value['book_publish_date'] : 'Unknown Publish Date';
+$book_description = (isset($saved_value['book_description']) && !empty($saved_value['book_description'])) ? $saved_value['book_description'] : 'No Description';
+$book_author = (isset($saved_value['book_author']) && !empty($saved_value['book_author'])) ? $saved_value['book_author'] : 'Unknown Author';
+$book_publisher = (isset($saved_value['book_publisher']) && !empty($saved_value['book_publisher'])) ? $saved_value['book_publisher'] : 'Unknown Publisher';
+$book_publish_date = (isset($saved_value['book_publish_date']) && !empty($saved_value['book_publish_date'])) ? $saved_value['book_publish_date'] : 'Unknown Publish Date';
 
 if(has_post_thumbnail()){
     $thumbnail_url = get_the_post_thumbnail_url(get_the_ID());
