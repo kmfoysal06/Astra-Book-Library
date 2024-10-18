@@ -15,6 +15,7 @@ class Astra_Book_Library{
         Assets::get_instance();
         Menus::get_instance();
         Books::get_instance();
+        Customizer::get_instance();
         $this->setup_hooks();
     }
 
@@ -42,6 +43,7 @@ class Astra_Book_Library{
             'flex-width'  => true,
             'flex-height' => true,
         ));
+        add_theme_support('customize-selective-refresh-widgets');
         add_theme_support('responsive-embeds');
         add_theme_support('wp-block-styles');
         add_theme_support('align-wide');

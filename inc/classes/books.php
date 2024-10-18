@@ -17,9 +17,10 @@ class Books{
          * Actions.
          */
         add_action('init', [$this,'register_book_post_type']);
+        add_action('init', [$this,'book_category']);
+        add_action('init', [$this, 'featured_category']);
         add_action('add_meta_boxes', [$this,'add_fields']);
         add_action('save_post', [$this, 'process_book_save'], 10, 3);
-        
     }
 
     public function register_book_post_type(){
@@ -130,5 +131,26 @@ class Books{
 
         // Update post meta
         update_post_meta($post_id, '__astra_library_book_info', $book_informations);
+    }
+    public function book_category(){
+    register_taxonomy('astra_library_book_category', ['astra_library_book'], [
+        'label' => __("Book Category"),
+    ]);
+}
+    public function featured_category() {
+        $category_name = 'Featured Books';
+        $category_slug = 'featured-books';
+
+        $category = get_term_by('slug', $category_slug, 'astra_library_book_category');
+
+        if (!$category) {
+            wp_insert_term(
+                $category_name,
+                'astra_library_book_category',
+                array(
+                    'slug' => $category_slug
+                )
+            );
+        }
     }
 }

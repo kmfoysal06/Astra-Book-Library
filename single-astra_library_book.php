@@ -12,12 +12,18 @@ $book_author = isset($saved_value['book_author']) ? $saved_value['book_author'] 
 $book_publisher = isset($saved_value['book_publisher']) ? $saved_value['book_publisher'] : 'Unknown Publisher';
 $book_publish_date = isset($saved_value['book_publish_date']) ? $saved_value['book_publish_date'] : 'Unknown Publish Date';
 
+if(has_post_thumbnail()){
+    $thumbnail_url = get_the_post_thumbnail_url(get_the_ID());
+}else{
+    $thumbnail_url = ASTRA_BOOK_LIBRARY_DIR_URI . '/assets/build/img/book-cover-placeholder.png';
+}
+
 
 ?>
 <div class="container">
 	<div class="single-book-container">
 		<div class="book-image">
-			<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
+			<img src="<?php echo $thumbnail_url; ?>" alt="">
 		</div>
 		<div class="book-information">
 			<h2><?php the_title(); ?></h2>

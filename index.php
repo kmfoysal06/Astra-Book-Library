@@ -7,6 +7,9 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 get_header();
+
+$hero_image = wp_get_attachment_url( get_theme_mod( 'astra_book_library_home_image' ) );
+
 ?>
 <section id="hero-content">
     <div class="hero-content-inner">
@@ -15,29 +18,10 @@ get_header();
         </div>
         <div class="hero-contents">
             <h2>Welcome to My Book Library</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptatem ipsa! Autem deserunt iusto rerum, maxime quasi dolorum sapiente eum numquam at modi exercitationem explicabo quisquam officiis ipsum quod, totam enim nesciunt eaque cumque consectetur ab odit! Nobis, laborum, commodi.</p>
+            <p><?php echo (empty(get_theme_mod('astra_book_library_home_paragraph')) ? 'This is A Default Text for This You Can Change This from Your Customizer as A Admin' : get_theme_mod('astra_book_library_home_paragraph')); ?></p>
         </div>
     </div>
-     <h3 class="featured">Featured</h3>
-        <div class="astra-book-library-slider">
-            <div class="single-book">
-                <img src="https://stmatthews.ph/wp-content/uploads/2018/08/Web_The-Little-Hero-Cover.jpg" alt="" width="200px">
-                <p>The Little Hero</p>
-            </div>
-            <div class="single-book">
-                <img src="https://stmatthews.ph/wp-content/uploads/2018/08/Web_The-Little-Hero-Cover.jpg" alt="" width="200px">
-                <p>The Little Hero</p>
-            </div>
-            <div class="single-book">
-                <img src="https://stmatthews.ph/wp-content/uploads/2018/08/Web_The-Little-Hero-Cover.jpg" alt="" width="200px">
-                <p>The Little Hero</p>
-            </div>
-            <div class="single-book">
-                <img src="https://stmatthews.ph/wp-content/uploads/2018/08/Web_The-Little-Hero-Cover.jpg" alt="" width="200px">
-                <p>The Little Hero</p>
-            </div>
-        </div>
-        <a href="#" class="hero-btn">See All Books</a>
+    <?php get_template_part('template-parts/components/home/featured-books'); ?>
 </section>
 
 <?php get_footer(); ?>

@@ -54,6 +54,7 @@ const plugins = (argv) => [
   new PurgeCSSPlugin({
     paths: glob.sync([
       path.join(__dirname, "src/**/*.html"),
+      path.join(__dirname, "src/**/*.js"),
       path.join(__dirname, "../**/*.html"),
       path.join(__dirname, "../**/*.php"),
       path.join(__dirname, "../template-parts/**/*.php"),
@@ -61,6 +62,7 @@ const plugins = (argv) => [
     safelist: {
       standard: [
          /^slick/,
+         /^astra-book-library/,
          ],
     }
   })

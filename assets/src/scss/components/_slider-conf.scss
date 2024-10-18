@@ -1,0 +1,23 @@
+button.astra-book-lib-inline {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button.astra-book-lib-inline.slick-next {
+    right: 0;
+}
+
+.single-book.slick-slide {
+    text-align: center;
+}
+
+.astra-book-library-slider a, .astra-book-library-slick-slider a{
+	color: #000;
+	text-align: center;
+}
+
+.single-book.slick-slide img {
+    margin: auto;
+}

@@ -1,9 +1,20 @@
 .single-book-container{
 	display: grid;
 	grid-template-columns:1fr 1fr;
+    gap:10px;
 
 	.book-image{
 		display: flex;
 		justify-content:center;
 	}
+}
+
+@media (max-width: 600px) {
+    .single-book-container{
+    	grid-template-columns: 1fr;
+    	padding:20px;
+    	h2{
+    		text-align:center;
+    	}
+    }
 }

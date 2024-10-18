@@ -27,6 +27,10 @@
 .slick-list:focus {
   outline: none;
 }
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
@@ -68,6 +72,9 @@
 .slick-slide.slick-loading img {
   display: none;
 }
+.slick-slide.dragging img {
+  pointer-events: none;
+}
 .slick-initialized .slick-slide {
   display: block;
 }
@@ -82,6 +89,30 @@
 
 .slick-arrow.slick-hidden {
   display: none;
+}
+
+button.astra-book-lib-inline {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button.astra-book-lib-inline.slick-next {
+  right: 0;
+}
+
+.single-book.slick-slide {
+  text-align: center;
+}
+
+.astra-book-library-slider a, .astra-book-library-slick-slider a {
+  color: #000;
+  text-align: center;
+}
+
+.single-book.slick-slide img {
+  margin: auto;
 }
 
 /*# sourceMappingURL=slider.css.map */
