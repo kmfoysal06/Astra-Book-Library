@@ -8,7 +8,7 @@ Text Domain: book-library-astra-kmfoysal06
 Author URI: http://profiles.wordpress.org/kmfoysal06
 
 === Images ===
-License: CC0 License_URI
+License: CC0
 hero_image.png - https://pxhere.com/en/photo/1639951
 
 == Designs ==
